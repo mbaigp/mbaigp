@@ -1,0 +1,255 @@
+testname: Ensayo Auditivo - GAES, una marca AMPLIFON - Audífono PH4-P
+testId: mushra_microson_PH4_P
+bufferSize: 2048 #The buffer size that is used for the audio processing. The smaller the buffer size, the smaller is the latency. However, small buffer sizes increase the computational load which can lead to audible artifacts. The buffer size must be one of the following values: 256, 512, 1024, 2048, 4096, 8192 or 16384.
+stopOnErrors: true
+showButtonPreviousPage: true
+language: es
+remoteService: service/write.php
+
+pages:
+    - type: generic
+      id: first_page
+      name: Bienvenida
+      content: Bienvenid@ a este ensayo auditivo organizado por Microson (grupo GAES-Amplifon),
+       Eurecat y la Universidad de Salford.<br><br> <img src="configs/resources/images/gaes-logo.png" alt="GAES Logo">
+    - type: volume
+      id: vol
+      name: Ajuste de volumen
+      content: Usted escuchará una serie de sonidos a través de sus audífonos inalámbricos. <br> 
+       Por favor, ajuste el volumen del dispositivo con los controles inferiores. <br>
+       Cuando el nivel sea comfortable para usted pulse el botón Siguiente.
+      stimulus: configs/resources/audio/target_EQ.wav
+      defaultVolume: 0.5
+    - type: mushra
+      id: training
+      name: Entrenamiento
+      content: A continuación puede probar como funciona el interfaz de usuario y así familiarizarse con el tipo de sonidos que escuchará durante la prueba. 
+       <br> Sus respuestas no se tendrán en cuenta para los resultados finales. No dude en solicitar asistencia en caso necesario.
+      showWaveform: true
+      enableLooping: true 
+      strict: false
+      randomize: true
+      showConditionNames: false
+      reference: configs/resources/audio/PH4-P/Bypass/020_ph4_p_bypass_ku100_plus_party_30deg_EQ.wav
+      createAnchor35: false
+      createAnchor70: false
+      stimuli:
+          Enabled: configs/resources/audio/PH4-P/Enabled/021_ph4_p_enabled_ku100_plus_party_30deg_EQ.wav
+          MildCausal: configs/resources/audio/PH4-P/Mild_causal/020_ph4_p_bypass_ku100_plus_party_30deg_mild_causal_EQ.wav
+          MildNon: configs/resources/audio/PH4-P/Mild_noncausal/020_ph4_p_bypass_ku100_plus_restaurant_0deg_mild_noncausal_EQ.wav
+          StrongCausal: configs/resources/audio/PH4-P/Strong_causal/020_ph4_p_bypass_ku100_plus_party_0deg_strong_causal_EQ.wav
+          StrongNon: configs/resources/audio/PH4-P/Strong_noncausal/020_ph4_p_bypass_ku100_plus_restaurant_0deg_strong_noncausal_EQ.wav
+    -
+          - random
+          - type: mushra
+            id: restaurant0
+            name: Escenario Restaurante
+            content: Imagine que se encuentra en medio de un restaurante rodeado de gente y está conversando con una mujer que le habla de frente. ¿Qué esperaría de sus audífonos en esta situación? 
+             <br> Determine su grado de preferencia del 0 al 100 para cada uno de los sonidos, tal que <br><br>- 100 (Excelente) corresponda al sonido que esperaría escuchar con sus audífonos. <br> - 0 (Malo) corresponda al sonido que menos le gustaría escuchar para esta situación en particular.
+            showWaveform: true
+            enableLooping: true 
+            strict: false
+            randomize: true
+            showConditionNames: true
+            reference: configs/resources/audio/PH4-P/Bypass/020_ph4_p_bypass_ku100_plus_restaurant_0deg_EQ.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                Enabled: configs/resources/audio/PH4-P/Enabled/021_ph4_p_enabled_ku100_plus_restaurant_0deg_EQ.wav
+                MildCausal: configs/resources/audio/PH4-P/Mild_causal/020_ph4_p_bypass_ku100_plus_restaurant_0deg_mild_causal_EQ.wav
+                MildNon: configs/resources/audio/PH4-P/Mild_noncausal/020_ph4_p_bypass_ku100_plus_restaurant_0deg_mild_noncausal_EQ.wav
+                StrongCausal: configs/resources/audio/PH4-P/Strong_causal/020_ph4_p_bypass_ku100_plus_restaurant_0deg_strong_causal_EQ.wav
+                StrongNon: configs/resources/audio/PH4-P/Strong_noncausal/020_ph4_p_bypass_ku100_plus_restaurant_0deg_strong_noncausal_EQ.wav
+          - type: mushra
+            id: restaurant30
+            name: Escenario Restaurante
+            content: Imagine que se encuentra en medio de un restaurante rodeado de gente y está conversando con una mujer que le habla desde el frente a la derecha. ¿Qué esperarías de sus audífonos en esta situación?
+             <br> Determine su grado de preferencia del 0 al 100 para cada uno de los sonidos, tal que <br><br>- 100 (Excelente) corresponda al sonido que esperaría escuchar con sus audífonos. <br> - 0 (Malo) corresponda al sonido que menos le gustaría escuchar para esta situación en particular.
+            showWaveform: true
+            enableLooping: true 
+            strict: false
+            randomize: true
+            showConditionNames: true
+            reference: configs/resources/audio/PH4-P/Bypass/020_ph4_p_bypass_ku100_plus_restaurant_30deg_EQ.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                Enabled: configs/resources/audio/PH4-P/Enabled/021_ph4_p_enabled_ku100_plus_restaurant_30deg_EQ.wav
+                MildCausal: configs/resources/audio/PH4-P/Mild_causal/020_ph4_p_bypass_ku100_plus_restaurant_30deg_mild_causal_EQ.wav
+                MildNon: configs/resources/audio/PH4-P/Mild_noncausal/020_ph4_p_bypass_ku100_plus_restaurant_30deg_mild_noncausal_EQ.wav
+                StrongCausal: configs/resources/audio/PH4-P/Strong_causal/020_ph4_p_bypass_ku100_plus_restaurant_30deg_strong_causal_EQ.wav
+                StrongNon: configs/resources/audio/PH4-P/Strong_noncausal/020_ph4_p_bypass_ku100_plus_restaurant_30deg_strong_noncausal_EQ.wav
+          - type: mushra
+            id: office0
+            name: Escenario Oficina
+            content: Imagine que se encuentra en medio de una oficina rodeado de gente y está conversando con una mujer que le habla de frente. ¿Qué esperaría de sus audífonos en esta situación?
+              <br> Determine su grado de preferencia del 0 al 100 para cada uno de los sonidos, tal que <br><br>- 100 (Excelente) corresponda al sonido que esperaría escuchar con sus audífonos. <br> - 0 (Malo) corresponda al sonido que menos le gustaría escuchar para esta situación en particular.
+            showWaveform: true
+            enableLooping: true 
+            strict: false
+            randomize: true
+            showConditionNames: true
+            reference: configs/resources/audio/PH4-P/Bypass/020_ph4_p_bypass_ku100_plus_meeting_0deg_EQ.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                Enabled: configs/resources/audio/PH4-P/Enabled/021_ph4_p_enabled_ku100_plus_meeting_0deg_EQ.wav
+                MildCausal: configs/resources/audio/PH4-P/Mild_causal/020_ph4_p_bypass_ku100_plus_meeting_0deg_mild_causal_EQ.wav
+                MildNon: configs/resources/audio/PH4-P/Mild_noncausal/020_ph4_p_bypass_ku100_plus_meeting_0deg_mild_noncausal_EQ.wav
+                StrongCausal: configs/resources/audio/PH4-P/Strong_causal/020_ph4_p_bypass_ku100_plus_meeting_0deg_strong_causal_EQ.wav
+                StrongNon: configs/resources/audio/PH4-P/Strong_noncausal/020_ph4_p_bypass_ku100_plus_meeting_0deg_strong_noncausal_EQ.wav
+          - type: mushra
+            id: office30
+            name: Escenario Oficina
+            content: Imagine que se encuentra en medio de una oficina rodeado de gente y está conversando con una mujer que le habla desde el frente a la derecha. ¿Qué esperarías de sus audífonos en esta situación?
+              <br> Determine su grado de preferencia del 0 al 100 para cada uno de los sonidos, tal que <br><br>- 100 (Excelente) corresponda al sonido que esperaría escuchar con sus audífonos. <br> - 0 (Malo) corresponda al sonido que menos le gustaría escuchar para esta situación en particular.
+            showWaveform: true
+            enableLooping: true 
+            strict: false
+            randomize: true
+            showConditionNames: true
+            reference: configs/resources/audio/PH4-P/Bypass/020_ph4_p_bypass_ku100_plus_meeting_30deg_EQ.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                Enabled: configs/resources/audio/PH4-P/Enabled/021_ph4_p_enabled_ku100_plus_meeting_30deg_EQ.wav
+                MildCausal: configs/resources/audio/PH4-P/Mild_causal/020_ph4_p_bypass_ku100_plus_meeting_30deg_mild_causal_EQ.wav
+                MildNon: configs/resources/audio/PH4-P/Mild_noncausal/020_ph4_p_bypass_ku100_plus_meeting_30deg_mild_noncausal_EQ.wav
+                StrongCausal: configs/resources/audio/PH4-P/Strong_causal/020_ph4_p_bypass_ku100_plus_meeting_30deg_strong_causal_EQ.wav
+                StrongNon: configs/resources/audio/PH4-P/Strong_noncausal/020_ph4_p_bypass_ku100_plus_meeting_30deg_strong_noncausal_EQ.wav
+          - type: mushra
+            id: party0
+            name: Escenario Fiesta
+            content: Imagine que se encuentra en medio de una sala de fiestas rodeado de gente y está conversando con una mujer que le habla de frente. ¿Qué esperaría de sus audífonos en esta situación?
+             <br> Determine su grado de preferencia del 0 al 100 para cada uno de los sonidos, tal que <br><br>- 100 (Excelente) corresponda al sonido que esperaría escuchar con sus audífonos. <br> - 0 (Malo) corresponda al sonido que menos le gustaría escuchar para esta situación en particular.
+            showWaveform: true
+            enableLooping: true 
+            strict: false
+            randomize: true
+            showConditionNames: true
+            reference: configs/resources/audio/PH4-P/Bypass/020_ph4_p_bypass_ku100_plus_party_0deg_EQ.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                Enabled: configs/resources/audio/PH4-P/Enabled/021_ph4_p_enabled_ku100_plus_party_0deg_EQ.wav
+                MildCausal: configs/resources/audio/PH4-P/Mild_causal/020_ph4_p_bypass_ku100_plus_party_0deg_mild_causal_EQ.wav
+                MildNon: configs/resources/audio/PH4-P/Mild_noncausal/020_ph4_p_bypass_ku100_plus_party_0deg_mild_noncausal_EQ.wav
+                StrongCausal: configs/resources/audio/PH4-P/Strong_causal/020_ph4_p_bypass_ku100_plus_party_0deg_strong_causal_EQ.wav
+                StrongNon: configs/resources/audio/PH4-P/Strong_noncausal/020_ph4_p_bypass_ku100_plus_party_0deg_strong_noncausal_EQ.wav
+          - type: mushra
+            id: party30
+            name: Escenario Fiesta
+            content: Imagine que se encuentra en medio de una sala de fiestas rodeado de gente y está conversando con una mujer que le habla desde el frente a la derecha. ¿Qué esperarías de sus audífonos en esta situación?
+              <br> Determine su grado de preferencia del 0 al 100 para cada uno de los sonidos, tal que <br><br>- 100 (Excelente) corresponda al sonido que esperaría escuchar con sus audífonos. <br> - 0 (Malo) corresponda al sonido que menos le gustaría escuchar para esta situación en particular.
+            showWaveform: true
+            enableLooping: true 
+            strict: false
+            randomize: true
+            showConditionNames: true
+            reference: configs/resources/audio/PH4-P/Bypass/020_ph4_p_bypass_ku100_plus_party_30deg_EQ.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                Enabled: configs/resources/audio/PH4-P/Enabled/021_ph4_p_enabled_ku100_plus_party_30deg_EQ.wav
+                MildCausal: configs/resources/audio/PH4-P/Mild_causal/020_ph4_p_bypass_ku100_plus_party_30deg_mild_causal_EQ.wav
+                MildNon: configs/resources/audio/PH4-P/Mild_noncausal/020_ph4_p_bypass_ku100_plus_party_30deg_mild_noncausal_EQ.wav
+                StrongCausal: configs/resources/audio/PH4-P/Strong_causal/020_ph4_p_bypass_ku100_plus_party_30deg_strong_causal_EQ.wav
+                StrongNon: configs/resources/audio/PH4-P/Strong_noncausal/020_ph4_p_bypass_ku100_plus_party_30deg_strong_noncausal_EQ.wav
+    - type: finish
+      name: Muchas gracias - Moltes gràcies - Thank you
+      content: ¡Gracias por su participación! Por favor, responda las preguntas presentadas a continuación:
+      showResults: true
+      writeResults: true
+      popupContent: Sus resultados se han enviado al servidor.<br> Gracias por su tiempo. Hasta luego! Adéu!  
+      questionnaire:
+          - type: text
+            label: ID participante:
+            name: id
+          - type: number
+            label: Edad:
+            name: age
+            min: 0
+            max: 100
+            default: 65
+          - type: likert
+            name: gender
+            label: Género:
+            response:
+             - value: female
+               label: Mujer
+             - value: male
+               label: Hombre
+             - value: other
+               label: Otro
+          - type: likert
+            name: HAtiempo
+            label: ¿Cuanto hace que usa audífonos (años)?
+            response:
+             - value: less1
+               label: menos de 1
+             - value: 1-2
+               label: 1-2
+             - value: 3-4
+               label: 3-4
+             - value: more4
+               label: más de 4
+          - type: likert
+            name: HAuser
+            label: ¿Usa habitualmente sus audífonos?
+            response:
+             - value: always
+               label: Siempre
+             - value: almostalways
+               label: Casi siempre
+             - value: rarely
+               label: A veces
+             - value: almostnever
+               label: Casi nunca
+             - value: never
+               label: Nunca
+          - type: likert
+            name: HAsatisfaction
+            label: ¿Está satisfecho con sus audífonos?
+            response:
+             - value: verysatisfied
+               label: Muy satisfecho
+             - value: satisfied
+               label: Satisfecho
+             - value: neutral
+               label: Neutral
+             - value: dissatisfied
+               label: Insatisfecho
+             - value: verydissatisfied
+               label: Muy insatisfecho
+          - type: likert
+            name: Difficulty
+            label: ¿Le ha parecido difícil de realizar este ensayo auditivo?
+            response:
+             - value: verydifficult
+               label: Muy difícil
+             - value: abitdifficult
+               label: Un poco difícil
+             - value: neutral
+               label: Ni fácil ni difícil
+             - value: abiteasy
+               label: Bastante fácil
+             - value: veryeasy
+               label: Muy fácil
+          - type: likert
+            name: Realism
+            label: ¿Le han parecido en general realistas los escenarios Fiesta, Restaurante y Oficina?
+            response:
+             - value: norealist
+               label: Nada realistas
+             - value: quiterealistic
+               label: Poco realistas
+             - value: somerealistic
+               label: Algo realistas
+             - value: quiterealist
+               label: Bastante realistas
+             - value: veryrealist
+               label: Muy realistas
+          - type: long_text
+            label: Comentarios adicionales:
+            name: feedback
+            optional: true
